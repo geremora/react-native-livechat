@@ -1,3 +1,9 @@
+## FORK 
+- Remove visitorSDK dependency. Is a deprecated API.
+- Add customer data prop
+- Fix bug with group id
+
+
 # LiveChat for React Native
 
 This is a React Native component to easily add [LiveChat widget](https://www.livechatinc.com/) to your application.
