@@ -48,7 +48,6 @@ export default class Chat extends React.Component {
 		if (isChatOn) {
 			return (
 				<View
-					animation="fadeInUp"
 					style={styles.container}
 					ref={(ref) => {
 						this.chat = ref
@@ -100,7 +99,7 @@ const styles = StyleSheet.create({
 	},
 	container: {
 		width,
-		height: '100%',
+		height: height - 10,
 		position: 'absolute',
 		top: 0,
 		left: 0,
