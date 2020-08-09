@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
 	},
 	container: {
 		width,
-		height: height - 10,
+		height: height - totalSize(1),
 		position: 'absolute',
 		top: 0,
 		left: 0,

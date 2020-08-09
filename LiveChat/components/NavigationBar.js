@@ -14,7 +14,6 @@ export default class NavigationBar extends Component {
 				<Text style={styles.title}>{this.props.chatTitle}</Text>
 				<TouchableOpacity style={styles.back} onPress={this.props.closeChat}>
 					<Image key={Math.random()} source={backImage} style={styles.backIcon} resizeMode="stretch" />
-					<Text style={styles.backText}>Back</Text>
 				</TouchableOpacity>
 			</View>
 		)
@@ -28,14 +27,14 @@ const styles = StyleSheet.create({
 		borderBottomColor: '#b2b2b2',
 		borderBottomWidth: 1,
 		flexDirection: 'row',
-		paddingTop: Platform.OS === 'ios' ? height / 25 : height / 40,
+		paddingTop: Platform.OS === 'ios' ? height / 20 : height / 40,
 	},
 	back: {
 		flexDirection: 'row',
 		marginLeft: width / 40,
 	},
 	backIcon: {
-		height: height / 30,
+		height: height / 32,
 		width: height / 60,
 	},
 	backText: {
@@ -45,13 +44,13 @@ const styles = StyleSheet.create({
 	},
 	title: {
 		color: '#444',
-		fontSize: totalSize(2.1),
+		fontSize: totalSize(2),
 		fontWeight: '600',
 		position: 'absolute',
 		width,
 		textAlign: 'center',
 		backgroundColor: 'transparent',
-		paddingTop: Platform.OS === 'ios' ? height / 25 : height / 40,
+		paddingTop: Platform.OS === 'ios' ? height / 22 : height / 40,
 	},
 })
 
