@@ -1,6 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, Dimensions, Platform } from 'react-native'
-import { View } from 'react-native-animatable'
+import { StyleSheet, Text, Dimensions, Platform, View } from 'react-native'
 import PropTypes from 'prop-types'
 import { GiftedChat } from 'react-native-gifted-chat'
 import NavigationBar from './NavigationBar'
@@ -99,7 +98,7 @@ const styles = StyleSheet.create({
 	},
 	container: {
 		width,
-		height: height - totalSize(1),
+		height: height - (Platform.OS === 'ios'?totalSize(1):totalSize(3)),
 		position: 'absolute',
 		top: 0,
 		left: 0,
@@ -125,7 +124,7 @@ const styles = StyleSheet.create({
 	},
 	status: {
 		textAlign: 'center',
-		fontSize: totalSize(2.1),
+		fontSize: totalSize(2),
 		fontWeight: '500',
 		color: '#444',
 		padding: 5,
